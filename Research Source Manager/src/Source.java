@@ -16,6 +16,7 @@ public class Source {
 	protected int yearOfPublication;
 	protected SourceType sourceType;
 	
+	//Needless comment to test git
 	public Source(String[] authors, String title, String[] subjects, String edition, String publisher, int yearOfPublication, SourceType sourceType){
 		this.authors = authors;
 		this.title = parseTitle(title);
