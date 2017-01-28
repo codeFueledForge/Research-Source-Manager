@@ -1,10 +1,25 @@
 package sourceformats;
-import sourceformats;
+import sourcedatatypes.*;
+import java.util.List;
+
 
 public interface Source{
 
 	//Returns an array of Strings representing Authors
-	Author[] getAuthors();
+	List getAuthors();
+	void setAuthors(Author[] authors);
+	boolean addAuthor(Author author);
+	
+	
+	Title getTitle();
+	void setTitle(Title title);
+	
+	PublicationData getPublicationData();
+	void setPublicationData(PublicationData data);
+	
+	List getSubjectList();
+	void setSubjectList();
+	boolean addSubjectToList(Subject subject);
 	
 	
 	
