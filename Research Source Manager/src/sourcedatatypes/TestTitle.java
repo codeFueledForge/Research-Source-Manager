@@ -5,23 +5,33 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class TestTitle {
-/*
+
 	@Test
 	public void testTitle() {
-		fail("Not yet implemented");
+		String title = "A Title";
+		Title myTitle = new Title(title);
+		assertTrue(myTitle.getTitle().equals(title));
 	}
 
 	@Test
 	public void testSetTitle() {
-		fail("Not yet implemented");
+		//Ensuring that get is not broken
+		String title = "A Title";
+		Title myTitle = new Title(title);
+		assertTrue(myTitle.getTitle().equals(title));
+		
+		title = "A new title";
+		myTitle.setTitle(title);
+		assertTrue(myTitle.getTitle().equals(title));
 	}
 
 	@Test
 	public void testGetTitle() {
-		fail("Not yet implemented");
+		String title = "A Title";
+		Title myTitle = new Title(title);
+		assertTrue(myTitle.getTitle().equals(title));
 	}
 
-*/
 	@Test
 	public void testParseTitle() {
 		String fakeTitle1 = "The Title: Easy Mode!";

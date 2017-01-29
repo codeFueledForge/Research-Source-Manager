@@ -8,30 +8,26 @@ public class Title {
 
 	public final char delimeter = 0xF1; //Unit separator character
 	private String title;
+	
 
 	public Title(String title){
-		
+		setTitle(title);
 	}
 	
 	public void setTitle(String title){
-		
+		this.title = title;
 	}
 	
 	public String getTitle(){
-		return "";
-	}
-	
-	
-	public boolean contains(){
-		return false;
+		return title;
 	}
 	
 	
 	//Gross, works for now;
 	/**
-	 * 
+	 * given a title like "Hello, we have 4 of Tom's suits!!!" it returns {"Hello", "we", "have", "4", "of", "Tom", "s", "suits"}
 	 * @param title
-	 * @return an array of substrings of words: a word is delimited by any non-digit or letter
+	 * @return an array of substrings of words: a word is delimited by any non-digit or letter, so all non-letter/digit characters mark the ends of words 
 	 */
 	public static String[] parseTitle(String title){
 		Scanner scanner = new Scanner(title);
@@ -87,7 +83,8 @@ public class Title {
 
 	}
 	
-	public static boolean isCharacterInRange(char c){
+	//Returns true if the character is a number or a letter. False otherwise;
+	private static boolean isCharacterInRange(char c){
 		if(0x30 > c || c > 0x7A){//outer bounds of characters (Digits and upper and lowercase letters)
 			return false;
 		}else{
