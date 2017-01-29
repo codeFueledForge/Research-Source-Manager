@@ -13,6 +13,7 @@ public interface Source{
 	
 	Title getTitle();
 	void setTitle(Title title);
+	boolean titleContains();
 	
 	PublicationData getPublicationData();
 	void setPublicationData(PublicationData data);
